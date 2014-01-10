@@ -9,7 +9,7 @@ Because this depends on the frequency of oscillation, we can increase our sensor
 
 follow the following wiring schematic to create the sensor
 
-<a href="./555_resistance_sensor.fzz"> <img src="555_resistance_sensor.png" width="300" alt="fritzing diagram"></a>
+<a href="./555_resistance_sensor.fzz"> <img src="555_resistance_sensor.png" width="400" align="center" alt="fritzing diagram"></a>
 
 
 ## BOM
