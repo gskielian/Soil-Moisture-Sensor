@@ -26,3 +26,6 @@ http://arduino.cc/en/Reference/attachInterrupt
 | :---   |  :--- |
 | 1 | 0.68 nF (680pF) Ceramic Capacitor |
 | 1 | 10 nF (0.01uF) Ceramic Capacitor |
+| 1 | 56kOhm Resistor |
+| 1 | 555 Timer |
+
