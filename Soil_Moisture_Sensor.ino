@@ -1,13 +1,17 @@
-//
+//a potentiometer may be used in place of the 56KOhm 
+//as a hardware sensitivity dial
 
-volatile long int count=0;
+volatile long int count=0; // volatile allows it to be changed by the interrupt function
+
 int accumulation_time=10000; //in microseconds
 
 void setup() {
-  
   Serial.begin(9600);
-  //attachInterrupt(0, add_to_count, RISING);
-  attachInterrupt(0, add_to_count, CHANGE); //CHANGE this will ensure to count both RISING and FALLING edges, doubling our sensor's sensitivity
+
+  //interrupt 1 is pin 3 on the Uno
+  //attachInterrup(interrupt number, function-to-call, RISING/FALLING/CHANGE)
+
+  attachInterrupt(1, add_to_count, CHANGE);
 }
 
 void loop() {
