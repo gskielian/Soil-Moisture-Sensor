@@ -31,5 +31,5 @@ while True:
   f = open('dataFile.txt','a')
   f.write(send_and_receive('1'))
   f.close()
-  time.sleep(1)
+  time.sleep(5)
 
