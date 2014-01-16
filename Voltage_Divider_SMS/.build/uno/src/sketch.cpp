@@ -1,3 +1,10 @@
+#include <Arduino.h>
+
+void setup();
+void loop();
+void forward_measurement();
+void reverse_measurement();
+#line 1 "src/sketch.ino"
 char ch;
 void setup() {
   Serial.begin(115200);
