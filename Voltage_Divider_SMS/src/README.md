@@ -17,11 +17,19 @@ After implementing this we definitively removed readout drift!
 
 ### Probe Corrosion
 
+
+
+#### Hardware Innovation 
+
+
 Typical current-based soil moisture sensors tend to corrode fairly quicky if their metals are exposed to the elements.  Some groups attempt to reduce corrosion of their sensor through electroplating with less corrosion prone metals like gold. 
 
 As per our mission to make this technology accessible, our strategy was to find corrosion resistant materials which are available in common hardware stores and inexpensive -- which is why we experimented (successfully!) with galvanized nails.*  So far this has worked like a charm!
 
 *Whole of the credit for this critical innovation goes to [treeherder](https://github.com/treeherder).
+
+
+#### Software Innovation
 
 The second innovation for addressing probe corrosion was to to minimize the time when electricity is flowing from one probe to the other.  This is the second awesome feature of our solution for the hysteresis problem, as all pins are in the ground state between measurements!
 
