@@ -24,13 +24,20 @@ void loop() {
 
 void forward_measurement() {
 
-//this was here for debugging
-//Serial.println("testing pre measurement");
-//Serial.println(analogRead(1));
+//FIRST we set all pins to 0V to remove hysterisis
 
-//FIRST we make the voltage divider
+pinMode(14, OUTPUT);
+digitalWrite(14,LOW);
+pinMode(16,OUTPUT);
+digitalWrite(16,LOW);
+pinMode(18, OUTPUT);
+digitalWrite(18, LOW);
 
-//16 to be an input (not really necessary the first time)
+delay(200);
+
+//SECOND we make the voltage divider
+
+//16 to be an input
 pinMode(16, INPUT);
 
 //we set 14 and 18 (aka a0 and a4) to outputs
@@ -42,15 +49,8 @@ digitalWrite(18,LOW);
 
 //NEXT we poll for voltage reading
 delay(500);
-Serial.print("Forward Measurement, "); Serial.println(analogRead(1));
+Serial.print("Forward Measurement, "); Serial.println(analogRead(A2));
 
-//LAST we set all pins to 0V to remove hysterisis
-
-digitalWrite(14,LOW);
-pinMode(16,OUTPUT);
-digitalWrite(16,LOW);
-
-//will do in python a 1 second delay here
 
 }
 

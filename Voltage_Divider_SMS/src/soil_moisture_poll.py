@@ -1,7 +1,7 @@
 #!/usr/local/bin/python
 
 import serial, time
-ser = serial.Serial('/dev/tty.usbmodem1421', 115200, timeout = 0.1)
+ser = serial.Serial('/dev/tty.usbmodem1411', 115200, timeout = 0.1)
 
 def send( theinput ):
   ser.write( theinput )
@@ -31,5 +31,5 @@ while True:
   f = open('dataFile.txt','a')
   f.write(send_and_receive('1'))
   f.close()
-  time.sleep(5)
+  time.sleep(2)
 
