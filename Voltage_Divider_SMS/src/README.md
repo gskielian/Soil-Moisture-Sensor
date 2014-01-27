@@ -1,7 +1,31 @@
-Soil-Moisture-Sensors
-=====================
+Soil-Moisture-Sensor Voltage Divider
+====================================
 
-I'll be designing a lot of these it seems.
+There were two major challenges we faced when creating a robust sensor: **hysteresis** and **probe corrosion**.
+
+
+## Hysteresis
+The voltage divider had it's initial difficulties with hysteresis.  Apparently measuring water's resistance changed the resistance of the water measured (I speculate this may be due to the ion redistribution effects from the metal probe's electric fields), one of the consequences of this is our readout would never setlle -- the resistance was coupled to the previous state.
+
+To remedy this, I reset the pinmodes and then wait around 500ms between measurements to both "drain" excess charge from each pin and to allow the water to return to it's initial state.
+
+
+After implementing this we definitively removed readout drift! 
+
+
+## Probe Corrosion
+
+Typical current-based soil moisture sensors tend to corrode fairly quicky if their metals are exposed to the elements.  Some groups attempt to reduce corrosion of their sensor through electroplating with less corrosion prone metals like gold. 
+
+As per our mission to make this technology accessible, our strategy was to find corrosion resistant materials which are available in common hardware stores and inexpensive -- which is why we experimented (successfully!) with galvanized nails.*  So far this has worked like a charm!
+
+*Whole of the credit for this critical innovation goes to [treeherder](https://github.com/treeherder).
+
+The second innovation for addressing probe corrosion was to to minimize the time when electricity is flowing from one probe to the other.  This is the second awesome feature of our solution for the hysteresis problem, as all pins are in the ground state between measurements!
+
+
+
+
 
 ##Description of Circuits
 
