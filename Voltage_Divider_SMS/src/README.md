@@ -1,7 +1,9 @@
 Soil-Moisture-Sensor Voltage Divider
 ====================================
 
-There were two major challenges we faced when creating a robust sensor: **hysteresis** and **probe corrosion**.
+There were two major challenges we faced when creating a robust sensor:
+* **hysteresis**  and
+* **probe corrosion**
 
 
 ### Hysteresis
