@@ -17,7 +17,7 @@ After implementing this we definitively removed readout drift!
 
 ### Probe Corrosion
 
-
+To keep our measurements in the linear range of the voltage divider, we first match our soil's resistance with a metal-film resistor (which usually turns out to be around 30kOhms, but varies with your probe setup).
 
 #### Hardware Innovation 
 
@@ -32,6 +32,11 @@ As per our mission to make this technology accessible, our strategy was to find 
 #### Software Innovation
 
 The second innovation for addressing probe corrosion was to to minimize the time when electricity is flowing from one probe to the other.  This is the second awesome feature of our solution for the hysteresis problem, as all pins are in the ground state between measurements!
+
+
+### Future directions
+
+In order to ensure greater reliability, we could switch to a current sensing method an employ an op-amp.  This would allow us to ramp the overall resistance of the circuit, and minimize the amount of electricity which flows through the water during measurements.  However, I doubt that anything will beat the simplicty of this method.
 
 
 
@@ -65,3 +70,5 @@ we are also seemingly limited by the size of a volatile int (best to set it at t
 The Equation is `1.1 * R * C = pulse duration`.  This can be easily measured using the pulseIn() function in Arduino, and also yields a convenient method for calculating the precise resistance and capacitance.
 
 I think this circuit will become my favorite after building it.
+
+
